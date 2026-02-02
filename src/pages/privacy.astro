@@ -6,71 +6,96 @@ import Layout from '../layouts/Layout.astro';
   title="Privacy Policy | PosturePro"
   description="PosturePro privacy policy. How we collect, use, and protect your data."
 >
+  <!-- Header -->
+  <header class="border-b border-slate-200 bg-white">
+    <div class="max-w-5xl mx-auto px-4 py-5 flex justify-between items-center">
+      <a href="/" class="text-xl font-semibold text-slate-800 tracking-tight">PosturePro</a>
+      <nav class="flex items-center gap-6">
+        <a href="/shipping" class="text-sm text-slate-600 hover:text-slate-900">Shipping</a>
+        <a href="/contact" class="text-sm text-slate-600 hover:text-slate-900">Contact</a>
+      </nav>
+    </div>
+  </header>
+
   <div class="max-w-3xl mx-auto px-4 py-16">
-    <h1 class="text-4xl font-bold mb-8">Privacy Policy</h1>
-    <p class="text-gray-500 mb-8">Last updated: February 1, 2026</p>
+    <h1 class="text-2xl font-medium text-slate-900 mb-2">Privacy Policy</h1>
+    <p class="text-sm text-slate-500 mb-8">Last updated: February 1, 2026</p>
 
-    <div class="prose prose-lg">
-      <h2 class="text-2xl font-bold mt-8 mb-4">Information We Collect</h2>
-      <p class="text-gray-600 mb-4">
-        When you make a purchase, we collect:
-      </p>
-      <ul class="list-disc pl-6 text-gray-600 space-y-2">
-        <li>Name and contact information</li>
-        <li>Shipping and billing address</li>
-        <li>Email address</li>
-        <li>Payment information (processed securely by Snipcart/Stripe)</li>
-      </ul>
+    <div class="space-y-8 text-sm text-slate-600 leading-relaxed">
+      <section>
+        <h2 class="text-base font-medium text-slate-900 mb-3">Information We Collect</h2>
+        <p class="mb-3">When you make a purchase, we collect:</p>
+        <ul class="list-disc pl-5 space-y-1">
+          <li>Name and contact information</li>
+          <li>Shipping and billing address</li>
+          <li>Email address</li>
+          <li>Payment information (processed securely by Snipcart/Stripe)</li>
+        </ul>
+      </section>
 
-      <h2 class="text-2xl font-bold mt-8 mb-4">How We Use Your Information</h2>
-      <ul class="list-disc pl-6 text-gray-600 space-y-2">
-        <li>Process and fulfill your orders</li>
-        <li>Send shipping updates and order confirmations</li>
-        <li>Provide customer support</li>
-        <li>Send marketing emails (only if you opt in)</li>
-      </ul>
+      <section>
+        <h2 class="text-base font-medium text-slate-900 mb-3">How We Use Your Information</h2>
+        <ul class="list-disc pl-5 space-y-1">
+          <li>Process and fulfill your orders</li>
+          <li>Send shipping updates and order confirmations</li>
+          <li>Provide customer support</li>
+          <li>Send marketing emails (only if you opt in)</li>
+        </ul>
+      </section>
 
-      <h2 class="text-2xl font-bold mt-8 mb-4">Data Security</h2>
-      <p class="text-gray-600 mb-4">
-        We use industry-standard encryption and security measures to protect your
-        personal information. Payment processing is handled by Snipcart and Stripe,
-        which are PCI-DSS compliant.
-      </p>
+      <section>
+        <h2 class="text-base font-medium text-slate-900 mb-3">Data Security</h2>
+        <p>
+          We use industry-standard encryption and security measures to protect your
+          personal information. Payment processing is handled by Snipcart and Stripe,
+          which are PCI-DSS compliant.
+        </p>
+      </section>
 
-      <h2 class="text-2xl font-bold mt-8 mb-4">Cookies</h2>
-      <p class="text-gray-600 mb-4">
-        We use cookies to improve your shopping experience and for analytics.
-        You can disable cookies in your browser settings.
-      </p>
+      <section>
+        <h2 class="text-base font-medium text-slate-900 mb-3">Cookies</h2>
+        <p>
+          We use cookies to improve your shopping experience and for analytics.
+          You can disable cookies in your browser settings.
+        </p>
+      </section>
 
-      <h2 class="text-2xl font-bold mt-8 mb-4">Third-Party Services</h2>
-      <p class="text-gray-600 mb-4">
-        We use the following third-party services:
-      </p>
-      <ul class="list-disc pl-6 text-gray-600 space-y-2">
-        <li>Snipcart (shopping cart and checkout)</li>
-        <li>Stripe (payment processing)</li>
-        <li>Google Analytics (website analytics)</li>
-      </ul>
+      <section>
+        <h2 class="text-base font-medium text-slate-900 mb-3">Third-Party Services</h2>
+        <p class="mb-3">We use the following third-party services:</p>
+        <ul class="list-disc pl-5 space-y-1">
+          <li>Snipcart (shopping cart and checkout)</li>
+          <li>Stripe (payment processing)</li>
+        </ul>
+      </section>
 
-      <h2 class="text-2xl font-bold mt-8 mb-4">Your Rights</h2>
-      <p class="text-gray-600 mb-4">
-        You have the right to:
-      </p>
-      <ul class="list-disc pl-6 text-gray-600 space-y-2">
-        <li>Access your personal data</li>
-        <li>Request deletion of your data</li>
-        <li>Opt out of marketing communications</li>
-        <li>Request a copy of your data</li>
-      </ul>
+      <section>
+        <h2 class="text-base font-medium text-slate-900 mb-3">Your Rights</h2>
+        <p class="mb-3">You have the right to:</p>
+        <ul class="list-disc pl-5 space-y-1">
+          <li>Access your personal data</li>
+          <li>Request deletion of your data</li>
+          <li>Opt out of marketing communications</li>
+          <li>Request a copy of your data</li>
+        </ul>
+      </section>
 
-      <h2 class="text-2xl font-bold mt-8 mb-4">Contact Us</h2>
-      <p class="text-gray-600">
-        Questions about our privacy practices? Contact us at
-        <a href="mailto:privacy@posturepro.com" class="text-green-600 hover:underline">privacy@posturepro.com</a>
-      </p>
+      <section>
+        <h2 class="text-base font-medium text-slate-900 mb-3">Contact Us</h2>
+        <p>
+          Questions about our privacy practices? Contact us at
+          <a href="mailto:support@posturepro.store" class="text-slate-900 underline">support@posturepro.store</a>
+        </p>
+      </section>
     </div>
 
-    <a href="/" class="inline-block mt-8 text-green-600 hover:underline">← Back to Shop</a>
+    <a href="/" class="inline-block mt-12 text-sm text-slate-600 hover:text-slate-900">Back to shop</a>
   </div>
+
+  <!-- Footer -->
+  <footer class="border-t border-slate-200 py-8 mt-16">
+    <div class="max-w-5xl mx-auto px-4 text-center text-sm text-slate-400">
+      <p>2026 PosturePro. All rights reserved.</p>
+    </div>
+  </footer>
 </Layout>

@@ -4,48 +4,72 @@ import Layout from '../layouts/Layout.astro';
 
 <Layout
   title="Refund Policy | PosturePro"
-  description="30-day money back guarantee on all PosturePro products."
+  description="30-day return policy on all PosturePro products."
 >
+  <!-- Header -->
+  <header class="border-b border-slate-200 bg-white">
+    <div class="max-w-5xl mx-auto px-4 py-5 flex justify-between items-center">
+      <a href="/" class="text-xl font-semibold text-slate-800 tracking-tight">PosturePro</a>
+      <nav class="flex items-center gap-6">
+        <a href="/shipping" class="text-sm text-slate-600 hover:text-slate-900">Shipping</a>
+        <a href="/contact" class="text-sm text-slate-600 hover:text-slate-900">Contact</a>
+      </nav>
+    </div>
+  </header>
+
   <div class="max-w-3xl mx-auto px-4 py-16">
-    <h1 class="text-4xl font-bold mb-8">Refund Policy</h1>
+    <h1 class="text-2xl font-medium text-slate-900 mb-8">Refund Policy</h1>
 
-    <div class="bg-green-50 p-6 rounded-xl mb-8">
-      <h2 class="text-xl font-bold text-green-800 mb-2">30-Day Money-Back Guarantee</h2>
-      <p class="text-green-700">
-        If you're not 100% satisfied with your PosturePro, return it within 30 days for a full refund.
-        No questions asked.
+    <div class="bg-slate-50 p-6 rounded-lg mb-8">
+      <h2 class="text-base font-medium text-slate-900 mb-2">30-Day Return Policy</h2>
+      <p class="text-sm text-slate-600">
+        If you're not satisfied with your purchase, you may return it within 30 days for a full refund.
       </p>
     </div>
 
-    <div class="prose prose-lg">
-      <h2 class="text-2xl font-bold mt-8 mb-4">How to Request a Refund</h2>
-      <ol class="list-decimal pl-6 text-gray-600 space-y-2">
-        <li>Email us at <a href="mailto:support@posturepro.com" class="text-green-600 hover:underline">support@posturepro.com</a> with your order number</li>
-        <li>We'll send you a prepaid return label (US orders only)</li>
-        <li>Ship the item back within 14 days</li>
-        <li>Receive your full refund within 5-7 business days of receipt</li>
-      </ol>
+    <div class="space-y-8 text-sm text-slate-600 leading-relaxed">
+      <section>
+        <h2 class="text-base font-medium text-slate-900 mb-3">How to Request a Refund</h2>
+        <ol class="list-decimal pl-5 space-y-2">
+          <li>Email us at <a href="mailto:support@posturepro.store" class="text-slate-900 underline">support@posturepro.store</a> with your order number</li>
+          <li>We'll send you return instructions</li>
+          <li>Ship the item back within 14 days</li>
+          <li>Receive your refund within 5-7 business days after we receive the return</li>
+        </ol>
+      </section>
 
-      <h2 class="text-2xl font-bold mt-8 mb-4">Refund Conditions</h2>
-      <ul class="list-disc pl-6 text-gray-600 space-y-2">
-        <li>Items must be returned within 30 days of delivery</li>
-        <li>Products should be in original packaging when possible</li>
-        <li>We accept returns even if worn or used — we stand behind our product</li>
-      </ul>
+      <section>
+        <h2 class="text-base font-medium text-slate-900 mb-3">Return Conditions</h2>
+        <ul class="list-disc pl-5 space-y-2">
+          <li>Items must be returned within 30 days of delivery</li>
+          <li>Products should be in original packaging when possible</li>
+          <li>We accept returns of used items</li>
+        </ul>
+      </section>
 
-      <h2 class="text-2xl font-bold mt-8 mb-4">Exchanges</h2>
-      <p class="text-gray-600 mb-4">
-        Need a different size? Email us and we'll arrange a free exchange.
-        You can keep using your current one until the new size arrives.
-      </p>
+      <section>
+        <h2 class="text-base font-medium text-slate-900 mb-3">Exchanges</h2>
+        <p>
+          Need a different size? Email us and we'll arrange an exchange.
+        </p>
+      </section>
 
-      <h2 class="text-2xl font-bold mt-8 mb-4">Damaged or Defective Items</h2>
-      <p class="text-gray-600 mb-4">
-        If your item arrives damaged or defective, contact us immediately.
-        We'll ship a replacement at no cost.
-      </p>
+      <section>
+        <h2 class="text-base font-medium text-slate-900 mb-3">Damaged or Defective Items</h2>
+        <p>
+          If your item arrives damaged or defective, contact us immediately.
+          We'll ship a replacement at no additional cost.
+        </p>
+      </section>
     </div>
 
-    <a href="/" class="inline-block mt-8 text-green-600 hover:underline">← Back to Shop</a>
+    <a href="/" class="inline-block mt-12 text-sm text-slate-600 hover:text-slate-900">Back to shop</a>
   </div>
+
+  <!-- Footer -->
+  <footer class="border-t border-slate-200 py-8 mt-16">
+    <div class="max-w-5xl mx-auto px-4 text-center text-sm text-slate-400">
+      <p>2026 PosturePro. All rights reserved.</p>
+    </div>
+  </footer>
 </Layout>

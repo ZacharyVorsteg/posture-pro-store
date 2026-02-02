@@ -6,37 +6,55 @@ import Layout from '../layouts/Layout.astro';
   title="Contact Us | PosturePro"
   description="Get in touch with PosturePro customer support."
 >
-  <div class="max-w-3xl mx-auto px-4 py-16">
-    <h1 class="text-4xl font-bold mb-8">Contact Us</h1>
+  <!-- Header -->
+  <header class="border-b border-slate-200 bg-white">
+    <div class="max-w-5xl mx-auto px-4 py-5 flex justify-between items-center">
+      <a href="/" class="text-xl font-semibold text-slate-800 tracking-tight">PosturePro</a>
+      <nav class="flex items-center gap-6">
+        <a href="/shipping" class="text-sm text-slate-600 hover:text-slate-900">Shipping</a>
+        <a href="/contact" class="text-sm text-slate-900 font-medium">Contact</a>
+      </nav>
+    </div>
+  </header>
 
-    <div class="grid md:grid-cols-2 gap-8 mb-12">
-      <div class="bg-gray-50 p-6 rounded-xl">
-        <h2 class="text-xl font-bold mb-3">Customer Support</h2>
-        <p class="text-gray-600 mb-2">For order inquiries, returns, and general questions:</p>
-        <a href="mailto:support@posturepro.com" class="text-green-600 hover:underline font-medium">
-          support@posturepro.com
+  <div class="max-w-3xl mx-auto px-4 py-16">
+    <h1 class="text-2xl font-medium text-slate-900 mb-8">Contact Us</h1>
+
+    <div class="grid md:grid-cols-2 gap-6 mb-12">
+      <div class="bg-slate-50 p-6 rounded-lg">
+        <h2 class="text-base font-medium text-slate-900 mb-3">Customer Support</h2>
+        <p class="text-sm text-slate-600 mb-3">For order inquiries, returns, and questions:</p>
+        <a href="mailto:support@posturepro.store" class="text-sm text-slate-900 underline">
+          support@posturepro.store
         </a>
-        <p class="text-sm text-gray-500 mt-2">Response time: Within 24 hours</p>
+        <p class="text-xs text-slate-500 mt-3">Response time: Within 24 hours</p>
       </div>
 
-      <div class="bg-gray-50 p-6 rounded-xl">
-        <h2 class="text-xl font-bold mb-3">Track Your Order</h2>
-        <p class="text-gray-600 mb-2">Check your email for tracking info, or contact us with your order number.</p>
-        <p class="text-sm text-gray-500 mt-2">Tracking updates sent via email</p>
+      <div class="bg-slate-50 p-6 rounded-lg">
+        <h2 class="text-base font-medium text-slate-900 mb-3">Track Your Order</h2>
+        <p class="text-sm text-slate-600">
+          Check your email for tracking information, or contact us with your order number.
+        </p>
       </div>
     </div>
 
-    <div class="bg-green-50 p-6 rounded-xl">
-      <h2 class="text-xl font-bold text-green-800 mb-3">Before You Contact Us</h2>
-      <p class="text-green-700 mb-4">Check our FAQ for quick answers:</p>
-      <ul class="list-disc pl-6 text-green-700 space-y-2">
-        <li><strong>Shipping:</strong> US orders arrive in 3-5 business days</li>
-        <li><strong>Returns:</strong> 30-day money-back guarantee, no questions asked</li>
-        <li><strong>Sizing:</strong> S/M fits 28"-36", L/XL fits 36"-48"</li>
-        <li><strong>Exchanges:</strong> Free size exchanges available</li>
+    <div class="border border-slate-200 p-6 rounded-lg">
+      <h2 class="text-base font-medium text-slate-900 mb-4">Common Questions</h2>
+      <ul class="space-y-3 text-sm text-slate-600">
+        <li><strong class="text-slate-700">Shipping:</strong> US orders arrive in 3-5 business days</li>
+        <li><strong class="text-slate-700">Returns:</strong> 30-day return policy</li>
+        <li><strong class="text-slate-700">Sizing:</strong> S/M fits 28-36", L/XL fits 36-48"</li>
+        <li><strong class="text-slate-700">Exchanges:</strong> Free size exchanges available</li>
       </ul>
     </div>
 
-    <a href="/" class="inline-block mt-8 text-green-600 hover:underline">← Back to Shop</a>
+    <a href="/" class="inline-block mt-12 text-sm text-slate-600 hover:text-slate-900">Back to shop</a>
   </div>
+
+  <!-- Footer -->
+  <footer class="border-t border-slate-200 py-8 mt-16">
+    <div class="max-w-5xl mx-auto px-4 text-center text-sm text-slate-400">
+      <p>2026 PosturePro. All rights reserved.</p>
+    </div>
+  </footer>
 </Layout>

@@ -6,42 +6,63 @@ import Layout from '../layouts/Layout.astro';
   title="Shipping Policy | PosturePro"
   description="Free US shipping on all PosturePro orders. 3-5 business day delivery."
 >
+  <!-- Header -->
+  <header class="border-b border-slate-200 bg-white">
+    <div class="max-w-5xl mx-auto px-4 py-5 flex justify-between items-center">
+      <a href="/" class="text-xl font-semibold text-slate-800 tracking-tight">PosturePro</a>
+      <nav class="flex items-center gap-6">
+        <a href="/shipping" class="text-sm text-slate-900 font-medium">Shipping</a>
+        <a href="/contact" class="text-sm text-slate-600 hover:text-slate-900">Contact</a>
+      </nav>
+    </div>
+  </header>
+
   <div class="max-w-3xl mx-auto px-4 py-16">
-    <h1 class="text-4xl font-bold mb-8">Shipping Policy</h1>
+    <h1 class="text-2xl font-medium text-slate-900 mb-8">Shipping Policy</h1>
 
-    <div class="prose prose-lg">
-      <h2 class="text-2xl font-bold mt-8 mb-4">Free US Shipping</h2>
-      <p class="text-gray-600 mb-4">
-        All orders shipped within the United States qualify for FREE standard shipping.
-        No minimum purchase required.
-      </p>
+    <div class="space-y-8 text-sm text-slate-600 leading-relaxed">
+      <section>
+        <h2 class="text-base font-medium text-slate-900 mb-3">Free US Shipping</h2>
+        <p>
+          All orders shipped within the United States qualify for free standard shipping.
+          No minimum purchase required.
+        </p>
+      </section>
 
-      <h2 class="text-2xl font-bold mt-8 mb-4">Delivery Times</h2>
-      <ul class="list-disc pl-6 text-gray-600 space-y-2">
-        <li><strong>US Standard:</strong> 3-5 business days (FREE)</li>
-        <li><strong>US Express:</strong> 1-2 business days ($9.99)</li>
-        <li><strong>International:</strong> 7-14 business days (varies by location)</li>
-      </ul>
+      <section>
+        <h2 class="text-base font-medium text-slate-900 mb-3">Delivery Times</h2>
+        <ul class="space-y-2">
+          <li><strong class="text-slate-700">US Standard:</strong> 3-5 business days (free)</li>
+          <li><strong class="text-slate-700">Processing:</strong> 1-2 business days</li>
+        </ul>
+        <p class="mt-3 text-slate-500">
+          You will receive a tracking number via email once your order ships.
+        </p>
+      </section>
 
-      <h2 class="text-2xl font-bold mt-8 mb-4">Order Processing</h2>
-      <p class="text-gray-600 mb-4">
-        Orders are processed within 1-2 business days. You will receive a tracking number
-        via email once your order ships.
-      </p>
+      <section>
+        <h2 class="text-base font-medium text-slate-900 mb-3">International Orders</h2>
+        <p>
+          We currently ship to the United States only.
+          We're working on expanding to additional countries.
+        </p>
+      </section>
 
-      <h2 class="text-2xl font-bold mt-8 mb-4">International Shipping</h2>
-      <p class="text-gray-600 mb-4">
-        We ship to most countries worldwide. International shipping rates and delivery
-        times are calculated at checkout based on your location. Please note that
-        international orders may be subject to customs duties and taxes.
-      </p>
-
-      <h2 class="text-2xl font-bold mt-8 mb-4">Questions?</h2>
-      <p class="text-gray-600">
-        Contact us at <a href="mailto:support@posturepro.com" class="text-green-600 hover:underline">support@posturepro.com</a>
-      </p>
+      <section>
+        <h2 class="text-base font-medium text-slate-900 mb-3">Questions?</h2>
+        <p>
+          Contact us at <a href="mailto:support@posturepro.store" class="text-slate-900 underline">support@posturepro.store</a>
+        </p>
+      </section>
     </div>
 
-    <a href="/" class="inline-block mt-8 text-green-600 hover:underline">← Back to Shop</a>
+    <a href="/" class="inline-block mt-12 text-sm text-slate-600 hover:text-slate-900">Back to shop</a>
   </div>
+
+  <!-- Footer -->
+  <footer class="border-t border-slate-200 py-8 mt-16">
+    <div class="max-w-5xl mx-auto px-4 text-center text-sm text-slate-400">
+      <p>2026 PosturePro. All rights reserved.</p>
+    </div>
+  </footer>
 </Layout>
