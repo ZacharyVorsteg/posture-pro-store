@@ -5,6 +5,9 @@ interface Props {
 }
 
 const { title, description } = Astro.props;
+
+// Get Snipcart API key from environment or use placeholder
+const snipcartKey = import.meta.env.PUBLIC_SNIPCART_API_KEY || 'YOUR_SNIPCART_PUBLIC_API_KEY';
 ---
 
 <!doctype html>
@@ -25,7 +28,7 @@ const { title, description } = Astro.props;
     <slot />
 
     <!-- Snipcart container -->
-    <div hidden id="snipcart" data-api-key="YOUR_SNIPCART_PUBLIC_API_KEY"></div>
+    <div hidden id="snipcart" data-api-key={snipcartKey}></div>
     <script src="https://cdn.snipcart.com/themes/v3.2.0/default/snipcart.js" async></script>
   </body>
 </html>

@@ -5,8 +5,16 @@ const product = {
   name: "PosturePro Corrector",
   price: 59.99,
   sku: "POSTURE-001",
-  image: "/product.svg",
-  description: "Adjustable posture support brace"
+  description: "Adjustable posture support brace",
+  // Replace these with real product images from CJDropshipping
+  images: [
+    "/product-1.jpg",  // Main product shot
+    "/product-2.jpg",  // Being worn
+    "/product-3.jpg",  // Detail/material
+    "/product-4.jpg"   // Packaging
+  ],
+  // Fallback to SVG if no real images yet
+  fallbackImage: "/product.svg"
 };
 ---
 
@@ -34,16 +42,30 @@ const product = {
   <section class="max-w-5xl mx-auto px-4 py-16">
     <div class="grid md:grid-cols-2 gap-16 items-start">
 
-      <!-- Product Image -->
+      <!-- Product Images -->
       <div>
-        <div class="bg-slate-50 rounded-lg p-12">
+        <!-- Main Image -->
+        <div class="bg-slate-50 rounded-lg p-8 mb-4">
           <img
-            src="/product.svg"
+            id="main-product-image"
+            src={product.fallbackImage}
             alt="PosturePro Corrector"
-            class="w-full max-w-sm mx-auto"
+            class="w-full max-w-md mx-auto"
+            onerror="this.src='/product.svg'"
           />
         </div>
-        <p class="text-xs text-slate-400 text-center mt-4">Product illustration. Actual product may vary slightly.</p>
+
+        <!-- Thumbnail Gallery (shows when real images exist) -->
+        <div class="grid grid-cols-4 gap-2" id="thumbnail-gallery">
+          <button
+            class="thumbnail-btn bg-slate-50 rounded p-2 border-2 border-slate-900"
+            data-src={product.fallbackImage}
+          >
+            <img src={product.fallbackImage} alt="View 1" class="w-full aspect-square object-contain" onerror="this.parentElement.style.display='none'" />
+          </button>
+        </div>
+
+        <p class="text-xs text-slate-400 text-center mt-4">Click thumbnails to view different angles</p>
       </div>
 
       <!-- Product Info -->
@@ -106,7 +128,7 @@ const product = {
           data-item-price={product.price}
           data-item-url="/"
           data-item-description={product.description}
-          data-item-image="/product.svg"
+          data-item-image={product.fallbackImage}
           data-item-name={product.name}
           data-item-custom1-name="Size"
           data-item-custom1-options="S/M|L/XL[+0.00]"
@@ -289,8 +311,9 @@ const product = {
     </div>
   </footer>
 
-  <!-- Size selector script -->
+  <!-- Size selector and image gallery script -->
   <script>
+    // Size selector
     document.querySelectorAll('.size-btn').forEach(btn => {
       btn.addEventListener('click', (e) => {
         document.querySelectorAll('.size-btn').forEach(b => {
@@ -304,6 +327,21 @@ const product = {
         document.querySelectorAll('.snipcart-add-item').forEach(addBtn => {
           addBtn.dataset.itemCustom1Value = size;
         });
+      });
+    });
+
+    // Thumbnail gallery
+    document.querySelectorAll('.thumbnail-btn').forEach(btn => {
+      btn.addEventListener('click', (e) => {
+        const src = e.currentTarget.dataset.src;
+        document.getElementById('main-product-image').src = src;
+
+        document.querySelectorAll('.thumbnail-btn').forEach(b => {
+          b.classList.remove('border-slate-900');
+          b.classList.add('border-transparent');
+        });
+        e.currentTarget.classList.remove('border-transparent');
+        e.currentTarget.classList.add('border-slate-900');
       });
     });
   </script>
