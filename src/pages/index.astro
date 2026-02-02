@@ -4,279 +4,287 @@ import Layout from '../layouts/Layout.astro';
 const product = {
   name: "PosturePro Corrector",
   price: 59.99,
-  comparePrice: 89.99,
   sku: "POSTURE-001",
-  image: "/product.jpg",
-  description: "Premium adjustable posture corrector for back pain relief"
+  image: "/product.svg",
+  description: "Adjustable posture support brace"
 };
 ---
 
 <Layout
-  title="PosturePro - End Back Pain & Fix Your Posture in 30 Days"
-  description="Doctor-recommended posture corrector. Relieves back pain, improves posture naturally. Free US shipping. 30-day money back guarantee."
+  title="PosturePro | Adjustable Posture Corrector"
+  description="Adjustable posture corrector designed to help relieve back discomfort. Free US shipping. 30-day return policy."
 >
-  <!-- Urgency Bar -->
-  <div class="bg-red-600 text-white text-center py-2 text-sm font-medium">
-    FREE SHIPPING + 30% OFF — Limited Time Only
-  </div>
-
-  <!-- Header -->
-  <header class="border-b border-gray-100">
-    <div class="max-w-6xl mx-auto px-4 py-4 flex justify-between items-center">
-      <div class="text-2xl font-bold text-gray-900">PosturePro</div>
-      <button class="snipcart-checkout relative">
-        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z" />
-        </svg>
-        <span class="snipcart-items-count absolute -top-2 -right-2 bg-red-600 text-white text-xs rounded-full h-5 w-5 flex items-center justify-center"></span>
-      </button>
+  <!-- Simple Header -->
+  <header class="border-b border-slate-200 bg-white">
+    <div class="max-w-5xl mx-auto px-4 py-5 flex justify-between items-center">
+      <a href="/" class="text-xl font-semibold text-slate-800 tracking-tight">PosturePro</a>
+      <nav class="flex items-center gap-6">
+        <a href="/shipping" class="text-sm text-slate-600 hover:text-slate-900">Shipping</a>
+        <a href="/contact" class="text-sm text-slate-600 hover:text-slate-900">Contact</a>
+        <button class="snipcart-checkout text-slate-600 hover:text-slate-900">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z" />
+          </svg>
+        </button>
+      </nav>
     </div>
   </header>
 
-  <!-- Hero Section -->
-  <section class="max-w-6xl mx-auto px-4 py-12 md:py-20">
-    <div class="grid md:grid-cols-2 gap-12 items-center">
+  <!-- Product Section -->
+  <section class="max-w-5xl mx-auto px-4 py-16">
+    <div class="grid md:grid-cols-2 gap-16 items-start">
+
       <!-- Product Image -->
-      <div class="relative">
-        <div class="absolute top-4 left-4 bg-red-600 text-white px-3 py-1 rounded-full text-sm font-bold">
-          BESTSELLER
+      <div>
+        <div class="bg-slate-50 rounded-lg p-12">
+          <img
+            src="/product.svg"
+            alt="PosturePro Corrector"
+            class="w-full max-w-sm mx-auto"
+          />
         </div>
-        <img
-          src="/product.jpg"
-          alt="PosturePro Corrector"
-          class="w-full rounded-2xl shadow-lg"
-          onerror="this.src='https://placehold.co/600x600/f3f4f6/374151?text=PosturePro'"
-        />
+        <p class="text-xs text-slate-400 text-center mt-4">Product illustration. Actual product may vary slightly.</p>
       </div>
 
       <!-- Product Info -->
       <div>
-        <div class="flex items-center gap-2 mb-4">
-          <div class="flex text-yellow-400">
-            {[...Array(5)].map(() => (
-              <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
-            ))}
-          </div>
-          <span class="text-sm text-gray-600">4.8/5 (2,347 reviews)</span>
-        </div>
-
-        <h1 class="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
-          Stop Living With Back Pain
+        <p class="text-sm text-slate-500 mb-2">Posture Support</p>
+        <h1 class="text-3xl font-medium text-slate-900 mb-4">
+          PosturePro Adjustable Corrector
         </h1>
 
-        <p class="text-xl text-gray-600 mb-6">
-          The PosturePro Corrector gently trains your muscles to maintain proper posture.
-          Feel the difference in just 2 weeks — or your money back.
+        <p class="text-slate-600 mb-8 leading-relaxed">
+          A lightweight, adjustable brace designed to gently encourage better posture during daily activities.
+          Made with breathable materials for extended wear.
         </p>
 
         <!-- Price -->
-        <div class="flex items-baseline gap-3 mb-6">
-          <span class="text-4xl font-bold text-gray-900">${product.price}</span>
-          <span class="text-xl text-gray-400 line-through">${product.comparePrice}</span>
-          <span class="bg-green-100 text-green-800 px-2 py-1 rounded text-sm font-medium">Save 33%</span>
+        <div class="mb-8">
+          <span class="text-2xl font-medium text-slate-900">${product.price}</span>
+          <span class="text-sm text-slate-500 ml-2">Free US shipping</span>
         </div>
 
-        <!-- Benefits -->
-        <ul class="space-y-3 mb-8">
-          <li class="flex items-center gap-3">
-            <svg class="w-6 h-6 text-green-500 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
-            <span>Relieves back, neck & shoulder pain</span>
-          </li>
-          <li class="flex items-center gap-3">
-            <svg class="w-6 h-6 text-green-500 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
-            <span>Adjustable fit for all body types</span>
-          </li>
-          <li class="flex items-center gap-3">
-            <svg class="w-6 h-6 text-green-500 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
-            <span>Invisible under clothes — wear anywhere</span>
-          </li>
-          <li class="flex items-center gap-3">
-            <svg class="w-6 h-6 text-green-500 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
-            <span>Free US shipping + 30-day guarantee</span>
-          </li>
-        </ul>
+        <!-- What's Included -->
+        <div class="border-t border-slate-200 pt-6 mb-8">
+          <h3 class="text-sm font-medium text-slate-900 mb-4">What's included</h3>
+          <ul class="space-y-2 text-sm text-slate-600">
+            <li class="flex items-start gap-3">
+              <svg class="w-4 h-4 text-slate-400 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
+              1x PosturePro adjustable corrector
+            </li>
+            <li class="flex items-start gap-3">
+              <svg class="w-4 h-4 text-slate-400 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
+              Sizing guide and usage instructions
+            </li>
+            <li class="flex items-start gap-3">
+              <svg class="w-4 h-4 text-slate-400 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
+              Storage pouch
+            </li>
+          </ul>
+        </div>
 
         <!-- Size Selector -->
-        <div class="mb-6">
-          <label class="block text-sm font-medium text-gray-700 mb-2">Size</label>
-          <div class="flex gap-3" id="size-selector">
-            <button class="size-btn px-6 py-3 border-2 border-gray-300 rounded-lg hover:border-gray-900 focus:outline-none focus:border-gray-900 transition" data-size="S/M">S/M (28"-36")</button>
-            <button class="size-btn px-6 py-3 border-2 border-gray-900 bg-gray-900 text-white rounded-lg" data-size="L/XL">L/XL (36"-48")</button>
+        <div class="mb-8">
+          <label class="text-sm font-medium text-slate-900 mb-3 block">Size</label>
+          <div class="grid grid-cols-2 gap-3" id="size-selector">
+            <button class="size-btn p-4 border border-slate-200 rounded-md hover:border-slate-400 transition text-left" data-size="S/M">
+              <div class="font-medium text-slate-900">S/M</div>
+              <div class="text-xs text-slate-500 mt-1">Chest: 28-36 inches</div>
+            </button>
+            <button class="size-btn p-4 border-2 border-slate-900 rounded-md text-left" data-size="L/XL">
+              <div class="font-medium text-slate-900">L/XL</div>
+              <div class="text-xs text-slate-500 mt-1">Chest: 36-48 inches</div>
+            </button>
           </div>
+          <p class="text-xs text-slate-500 mt-3">Measure around your chest, just below armpits. When between sizes, size up.</p>
         </div>
 
-        <!-- Buy Button -->
+        <!-- Add to Cart -->
         <button
-          class="snipcart-add-item w-full bg-green-600 hover:bg-green-700 text-white text-xl font-bold py-4 px-8 rounded-xl transition-all transform hover:scale-[1.02] shadow-lg"
+          class="snipcart-add-item w-full bg-slate-900 hover:bg-slate-800 text-white font-medium py-4 px-6 rounded-md transition"
           data-item-id={product.sku}
           data-item-price={product.price}
           data-item-url="/"
           data-item-description={product.description}
-          data-item-image="/product.jpg"
+          data-item-image="/product.svg"
           data-item-name={product.name}
           data-item-custom1-name="Size"
           data-item-custom1-options="S/M|L/XL[+0.00]"
           data-item-custom1-value="L/XL"
         >
-          Add to Cart — ${product.price}
+          Add to Cart
         </button>
 
-        <!-- Trust Badges -->
-        <div class="flex items-center justify-center gap-6 mt-6 text-sm text-gray-500">
-          <div class="flex items-center gap-1">
-            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"/></svg>
-            Secure Checkout
-          </div>
-          <div class="flex items-center gap-1">
-            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/></svg>
-            30-Day Guarantee
+        <!-- Policies -->
+        <div class="mt-6 pt-6 border-t border-slate-200">
+          <div class="grid grid-cols-3 gap-4 text-center">
+            <div>
+              <div class="text-xs font-medium text-slate-900">Free Shipping</div>
+              <div class="text-xs text-slate-500">US orders</div>
+            </div>
+            <div>
+              <div class="text-xs font-medium text-slate-900">30-Day Returns</div>
+              <div class="text-xs text-slate-500">No questions</div>
+            </div>
+            <div>
+              <div class="text-xs font-medium text-slate-900">Secure Payment</div>
+              <div class="text-xs text-slate-500">SSL encrypted</div>
+            </div>
           </div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- Social Proof -->
-  <section class="bg-gray-50 py-16">
-    <div class="max-w-6xl mx-auto px-4">
-      <h2 class="text-3xl font-bold text-center mb-12">What Our Customers Say</h2>
+  <!-- Product Details -->
+  <section class="bg-slate-50 py-16">
+    <div class="max-w-5xl mx-auto px-4">
+      <h2 class="text-xl font-medium text-slate-900 mb-8">Product Details</h2>
 
-      <div class="grid md:grid-cols-3 gap-8">
-        <div class="bg-white p-6 rounded-xl shadow-sm">
-          <div class="flex text-yellow-400 mb-3">
-            {[...Array(5)].map(() => (
-              <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
-            ))}
-          </div>
-          <p class="text-gray-600 mb-4">"I work from home and my back was killing me. After 2 weeks with PosturePro, the pain is almost completely gone. Best $60 I've spent."</p>
-          <div class="font-medium">Sarah M.</div>
-          <div class="text-sm text-gray-500">Verified Buyer</div>
+      <div class="grid md:grid-cols-2 gap-12">
+        <div>
+          <h3 class="text-sm font-medium text-slate-900 mb-4">Materials</h3>
+          <ul class="text-sm text-slate-600 space-y-2">
+            <li>Neoprene blend outer shell</li>
+            <li>Breathable mesh lining</li>
+            <li>Adjustable velcro straps</li>
+            <li>Reinforced stitching at stress points</li>
+          </ul>
         </div>
 
-        <div class="bg-white p-6 rounded-xl shadow-sm">
-          <div class="flex text-yellow-400 mb-3">
-            {[...Array(5)].map(() => (
-              <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
-            ))}
-          </div>
-          <p class="text-gray-600 mb-4">"My chiropractor recommended I try a posture corrector. This one is comfortable enough to wear all day. Game changer."</p>
-          <div class="font-medium">Mike R.</div>
-          <div class="text-sm text-gray-500">Verified Buyer</div>
+        <div>
+          <h3 class="text-sm font-medium text-slate-900 mb-4">Care Instructions</h3>
+          <ul class="text-sm text-slate-600 space-y-2">
+            <li>Hand wash with mild soap</li>
+            <li>Air dry only, do not tumble dry</li>
+            <li>Do not iron or bleach</li>
+            <li>Store flat or rolled</li>
+          </ul>
         </div>
+      </div>
 
-        <div class="bg-white p-6 rounded-xl shadow-sm">
-          <div class="flex text-yellow-400 mb-3">
-            {[...Array(5)].map(() => (
-              <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
-            ))}
+      <div class="mt-12 pt-12 border-t border-slate-200">
+        <h3 class="text-sm font-medium text-slate-900 mb-4">How to Use</h3>
+        <div class="grid md:grid-cols-3 gap-8">
+          <div>
+            <div class="text-xs text-slate-400 mb-2">Step 1</div>
+            <p class="text-sm text-slate-600">Slip arms through loops like a backpack. The main panel should rest against your mid-back.</p>
           </div>
-          <p class="text-gray-600 mb-4">"Shipping was fast, quality is great. I've tried others but this one actually stays in place. Already ordered one for my husband."</p>
-          <div class="font-medium">Jennifer L.</div>
-          <div class="text-sm text-gray-500">Verified Buyer</div>
+          <div>
+            <div class="text-xs text-slate-400 mb-2">Step 2</div>
+            <p class="text-sm text-slate-600">Adjust the front straps until snug but not restrictive. You should be able to breathe normally.</p>
+          </div>
+          <div>
+            <div class="text-xs text-slate-400 mb-2">Step 3</div>
+            <p class="text-sm text-slate-600">Start with 15-30 minutes daily. Gradually increase as your muscles adapt.</p>
+          </div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- Problem/Solution -->
+  <!-- Honest Expectations -->
   <section class="py-16">
-    <div class="max-w-4xl mx-auto px-4 text-center">
-      <h2 class="text-3xl font-bold mb-6">Poor Posture Is Costing You More Than You Think</h2>
-      <p class="text-xl text-gray-600 mb-8">
-        Back pain. Neck tension. Headaches. Low energy. Poor sleep.
-        They're all connected to how you sit and stand.
-      </p>
+    <div class="max-w-3xl mx-auto px-4">
+      <h2 class="text-xl font-medium text-slate-900 mb-8">What to Expect</h2>
 
-      <div class="grid md:grid-cols-2 gap-8 text-left">
-        <div class="bg-red-50 p-6 rounded-xl">
-          <h3 class="font-bold text-red-800 mb-3">Without PosturePro</h3>
-          <ul class="space-y-2 text-red-700">
-            <li>• Chronic back & neck pain</li>
-            <li>• Slouching gets worse over time</li>
-            <li>• Look tired and less confident</li>
-            <li>• $100s spent on chiropractors</li>
+      <div class="prose prose-slate max-w-none">
+        <p class="text-slate-600 leading-relaxed mb-6">
+          A posture corrector is a tool, not a cure. It works by providing physical feedback when you slouch,
+          helping train your muscles to maintain better alignment over time.
+        </p>
+
+        <p class="text-slate-600 leading-relaxed mb-6">
+          Most people find it takes 2-4 weeks of consistent use to notice improvements in their posture habits.
+          Results vary based on individual factors including how often you wear it and your starting posture.
+        </p>
+
+        <div class="bg-slate-50 rounded-lg p-6 my-8">
+          <h3 class="text-sm font-medium text-slate-900 mb-3">This product may help with:</h3>
+          <ul class="text-sm text-slate-600 space-y-2">
+            <li>Providing gentle posture reminders during desk work</li>
+            <li>Building awareness of your body position</li>
+            <li>Supporting your shoulders in a neutral position</li>
           </ul>
         </div>
-        <div class="bg-green-50 p-6 rounded-xl">
-          <h3 class="font-bold text-green-800 mb-3">With PosturePro</h3>
-          <ul class="space-y-2 text-green-700">
-            <li>• Pain relief in 2-4 weeks</li>
-            <li>• Muscle memory builds naturally</li>
-            <li>• Stand taller, look more confident</li>
-            <li>• One-time $59.99 investment</li>
-          </ul>
+
+        <div class="bg-amber-50 border border-amber-200 rounded-lg p-6">
+          <h3 class="text-sm font-medium text-amber-900 mb-3">Important Note</h3>
+          <p class="text-sm text-amber-800">
+            This product is not a medical device and is not intended to diagnose, treat, cure, or prevent
+            any disease. If you have chronic back pain or a medical condition, please consult a healthcare
+            professional before use.
+          </p>
         </div>
       </div>
     </div>
   </section>
 
   <!-- FAQ -->
-  <section class="bg-gray-50 py-16">
+  <section class="bg-slate-50 py-16">
     <div class="max-w-3xl mx-auto px-4">
-      <h2 class="text-3xl font-bold text-center mb-12">Frequently Asked Questions</h2>
+      <h2 class="text-xl font-medium text-slate-900 mb-8">Common Questions</h2>
 
-      <div class="space-y-4">
-        <details class="bg-white p-6 rounded-xl shadow-sm">
-          <summary class="font-medium cursor-pointer">How long until I see results?</summary>
-          <p class="mt-3 text-gray-600">Most customers notice reduced pain within 1-2 weeks. For lasting posture improvement, we recommend wearing it 1-2 hours daily for 30 days.</p>
-        </details>
+      <div class="space-y-6">
+        <div class="border-b border-slate-200 pb-6">
+          <h3 class="text-sm font-medium text-slate-900 mb-2">How long does shipping take?</h3>
+          <p class="text-sm text-slate-600">US orders typically arrive in 3-5 business days. We ship from our US warehouse via USPS.</p>
+        </div>
 
-        <details class="bg-white p-6 rounded-xl shadow-sm">
-          <summary class="font-medium cursor-pointer">Is it comfortable to wear?</summary>
-          <p class="mt-3 text-gray-600">Yes! Unlike rigid braces, PosturePro uses breathable, flexible materials. It's designed to be worn comfortably under clothes during work, exercise, or daily activities.</p>
-        </details>
+        <div class="border-b border-slate-200 pb-6">
+          <h3 class="text-sm font-medium text-slate-900 mb-2">Can I wear it under clothes?</h3>
+          <p class="text-sm text-slate-600">Yes, it's designed to be worn under most shirts. The slim profile makes it relatively discreet, though some outlines may be visible with tight clothing.</p>
+        </div>
 
-        <details class="bg-white p-6 rounded-xl shadow-sm">
-          <summary class="font-medium cursor-pointer">How does the 30-day guarantee work?</summary>
-          <p class="mt-3 text-gray-600">If you're not satisfied for any reason, simply email us within 30 days for a full refund. No questions asked.</p>
-        </details>
+        <div class="border-b border-slate-200 pb-6">
+          <h3 class="text-sm font-medium text-slate-900 mb-2">How do I know if it's the right size?</h3>
+          <p class="text-sm text-slate-600">Measure your chest circumference just below your armpits. S/M fits 28-36 inches, L/XL fits 36-48 inches. If you're between sizes, we recommend sizing up for comfort.</p>
+        </div>
 
-        <details class="bg-white p-6 rounded-xl shadow-sm">
-          <summary class="font-medium cursor-pointer">How long does shipping take?</summary>
-          <p class="mt-3 text-gray-600">US orders ship free via USPS and typically arrive in 3-5 business days. International shipping is available at checkout.</p>
-        </details>
+        <div class="border-b border-slate-200 pb-6">
+          <h3 class="text-sm font-medium text-slate-900 mb-2">What's your return policy?</h3>
+          <p class="text-sm text-slate-600">We offer a 30-day return policy. If you're not satisfied, email us for a return label. Refunds are processed within 5-7 business days of receiving the return.</p>
+        </div>
+
+        <div class="pb-6">
+          <h3 class="text-sm font-medium text-slate-900 mb-2">Is this suitable for everyone?</h3>
+          <p class="text-sm text-slate-600">This corrector is designed for adults without serious spinal conditions. If you have scoliosis, herniated discs, or other medical conditions, please consult your doctor first.</p>
+        </div>
       </div>
     </div>
   </section>
 
-  <!-- Final CTA -->
-  <section class="py-16">
-    <div class="max-w-2xl mx-auto px-4 text-center">
-      <h2 class="text-3xl font-bold mb-4">Ready to Fix Your Posture?</h2>
-      <p class="text-xl text-gray-600 mb-8">
-        Join 50,000+ customers who've said goodbye to back pain.
-      </p>
-
-      <button
-        class="snipcart-add-item bg-green-600 hover:bg-green-700 text-white text-xl font-bold py-4 px-12 rounded-xl transition-all transform hover:scale-[1.02] shadow-lg"
-        data-item-id={product.sku}
-        data-item-price={product.price}
-        data-item-url="/"
-        data-item-description={product.description}
-        data-item-image="/product.jpg"
-        data-item-name={product.name}
-        data-item-custom1-name="Size"
-        data-item-custom1-options="S/M|L/XL[+0.00]"
-        data-item-custom1-value="L/XL"
-      >
-        Get PosturePro — ${product.price}
-      </button>
-
-      <p class="mt-4 text-sm text-gray-500">Free US Shipping • 30-Day Money-Back Guarantee</p>
-    </div>
-  </section>
-
   <!-- Footer -->
-  <footer class="border-t border-gray-100 py-8">
-    <div class="max-w-6xl mx-auto px-4">
-      <div class="flex flex-col md:flex-row justify-between items-center gap-4">
-        <div class="text-gray-600">© 2026 PosturePro. All rights reserved.</div>
-        <div class="flex gap-6 text-sm text-gray-500">
-          <a href="/shipping" class="hover:text-gray-900">Shipping</a>
-          <a href="/refunds" class="hover:text-gray-900">Refunds</a>
-          <a href="/privacy" class="hover:text-gray-900">Privacy</a>
-          <a href="/contact" class="hover:text-gray-900">Contact</a>
+  <footer class="border-t border-slate-200 py-12">
+    <div class="max-w-5xl mx-auto px-4">
+      <div class="grid md:grid-cols-4 gap-8 mb-8">
+        <div>
+          <div class="font-semibold text-slate-800 mb-4">PosturePro</div>
+          <p class="text-sm text-slate-500">Simple posture support for everyday use.</p>
         </div>
+        <div>
+          <h4 class="text-sm font-medium text-slate-900 mb-4">Shop</h4>
+          <ul class="space-y-2 text-sm text-slate-500">
+            <li><a href="/" class="hover:text-slate-900">Product</a></li>
+            <li><a href="/shipping" class="hover:text-slate-900">Shipping</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="text-sm font-medium text-slate-900 mb-4">Support</h4>
+          <ul class="space-y-2 text-sm text-slate-500">
+            <li><a href="/contact" class="hover:text-slate-900">Contact</a></li>
+            <li><a href="/refunds" class="hover:text-slate-900">Returns</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="text-sm font-medium text-slate-900 mb-4">Legal</h4>
+          <ul class="space-y-2 text-sm text-slate-500">
+            <li><a href="/privacy" class="hover:text-slate-900">Privacy Policy</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="pt-8 border-t border-slate-200 text-center text-sm text-slate-400">
+        <p>2026 PosturePro. All rights reserved.</p>
       </div>
     </div>
   </footer>
@@ -286,14 +294,13 @@ const product = {
     document.querySelectorAll('.size-btn').forEach(btn => {
       btn.addEventListener('click', (e) => {
         document.querySelectorAll('.size-btn').forEach(b => {
-          b.classList.remove('border-gray-900', 'bg-gray-900', 'text-white');
-          b.classList.add('border-gray-300');
+          b.classList.remove('border-2', 'border-slate-900');
+          b.classList.add('border', 'border-slate-200');
         });
-        e.target.classList.add('border-gray-900', 'bg-gray-900', 'text-white');
-        e.target.classList.remove('border-gray-300');
+        e.currentTarget.classList.remove('border', 'border-slate-200');
+        e.currentTarget.classList.add('border-2', 'border-slate-900');
 
-        // Update Snipcart buttons
-        const size = e.target.dataset.size;
+        const size = e.currentTarget.dataset.size;
         document.querySelectorAll('.snipcart-add-item').forEach(addBtn => {
           addBtn.dataset.itemCustom1Value = size;
         });

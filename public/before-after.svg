@@ -1,0 +1,98 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 300">
+  <defs>
+    <linearGradient id="badBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#fef2f2"/>
+      <stop offset="100%" style="stop-color:#fee2e2"/>
+    </linearGradient>
+    <linearGradient id="goodBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#f0fdf4"/>
+      <stop offset="100%" style="stop-color:#dcfce7"/>
+    </linearGradient>
+    <linearGradient id="skin" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#fdbf6f"/>
+      <stop offset="100%" style="stop-color:#e6a756"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Before section -->
+  <rect x="0" y="0" width="290" height="300" fill="url(#badBg)"/>
+
+  <!-- Before label -->
+  <rect x="20" y="20" width="80" height="30" rx="15" fill="#ef4444"/>
+  <text x="60" y="40" text-anchor="middle" fill="white" font-size="14" font-weight="bold">BEFORE</text>
+
+  <!-- Slouching figure -->
+  <g transform="translate(100, 60)">
+    <!-- Head (tilted forward) -->
+    <ellipse cx="70" cy="40" rx="22" ry="26" fill="url(#skin)"/>
+    <ellipse cx="70" cy="28" rx="25" ry="18" fill="#4a3728"/>
+
+    <!-- Curved spine (bad posture) -->
+    <path d="M70 65 Q50 100 55 140 Q50 180 60 220"
+          stroke="#ef4444" stroke-width="8" fill="none" stroke-linecap="round" opacity="0.6"/>
+
+    <!-- Body hunched -->
+    <path d="M40 80 Q70 70 100 85 Q110 130 100 180 L40 180 Q30 130 40 80" fill="#94a3b8"/>
+
+    <!-- Shoulders rounded forward -->
+    <ellipse cx="35" cy="90" rx="15" ry="20" fill="url(#skin)"/>
+    <ellipse cx="105" cy="90" rx="15" ry="20" fill="url(#skin)"/>
+
+    <!-- Pain indicators -->
+    <g transform="translate(20, 100)">
+      <text x="0" y="0" font-size="16" fill="#ef4444">⚡</text>
+    </g>
+    <g transform="translate(90, 70)">
+      <text x="0" y="0" font-size="16" fill="#ef4444">⚡</text>
+    </g>
+    <g transform="translate(45, 150)">
+      <text x="0" y="0" font-size="16" fill="#ef4444">⚡</text>
+    </g>
+  </g>
+
+  <!-- Divider -->
+  <rect x="290" y="0" width="20" height="300" fill="#e5e7eb"/>
+  <text x="300" y="160" text-anchor="middle" fill="#9ca3af" font-size="24">→</text>
+
+  <!-- After section -->
+  <rect x="310" y="0" width="290" height="300" fill="url(#goodBg)"/>
+
+  <!-- After label -->
+  <rect x="330" y="20" width="80" height="30" rx="15" fill="#10b981"/>
+  <text x="370" y="40" text-anchor="middle" fill="white" font-size="14" font-weight="bold">AFTER</text>
+
+  <!-- Upright figure -->
+  <g transform="translate(400, 60)">
+    <!-- Head (upright) -->
+    <ellipse cx="70" cy="25" rx="22" ry="26" fill="url(#skin)"/>
+    <ellipse cx="70" cy="13" rx="25" ry="18" fill="#4a3728"/>
+
+    <!-- Straight spine (good posture) -->
+    <path d="M70 50 L70 100 L70 150 L70 200"
+          stroke="#10b981" stroke-width="8" fill="none" stroke-linecap="round" opacity="0.6"/>
+
+    <!-- Body upright -->
+    <path d="M40 65 Q70 55 100 65 Q105 110 100 160 L40 160 Q35 110 40 65" fill="#3b82f6"/>
+
+    <!-- Posture corrector -->
+    <path d="M45 70 Q70 60 95 70" stroke="#1f2937" stroke-width="6" fill="none" stroke-linecap="round"/>
+    <path d="M45 70 L38 110" stroke="#1f2937" stroke-width="5" fill="none"/>
+    <path d="M95 70 L102 110" stroke="#1f2937" stroke-width="5" fill="none"/>
+
+    <!-- Shoulders back -->
+    <ellipse cx="30" cy="75" rx="15" ry="18" fill="url(#skin)"/>
+    <ellipse cx="110" cy="75" rx="15" ry="18" fill="url(#skin)"/>
+
+    <!-- Happy indicators -->
+    <g transform="translate(10, 80)">
+      <text x="0" y="0" font-size="16" fill="#10b981">✓</text>
+    </g>
+    <g transform="translate(115, 60)">
+      <text x="0" y="0" font-size="16" fill="#10b981">✓</text>
+    </g>
+  </g>
+
+  <!-- Bottom text -->
+  <text x="145" y="280" text-anchor="middle" fill="#dc2626" font-size="12" font-weight="500">Chronic Pain</text>
+  <text x="455" y="280" text-anchor="middle" fill="#059669" font-size="12" font-weight="500">Pain-Free Living</text>
+</svg>

@@ -1,0 +1,79 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 400">
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#f0fdf4"/>
+      <stop offset="100%" style="stop-color:#dcfce7"/>
+    </linearGradient>
+    <linearGradient id="skinTone" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#fdbf6f"/>
+      <stop offset="100%" style="stop-color:#e6a756"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Background -->
+  <rect width="600" height="400" fill="url(#bgGrad)"/>
+
+  <!-- Office desk suggestion -->
+  <rect x="350" y="280" width="200" height="15" rx="3" fill="#d1d5db"/>
+  <rect x="380" y="200" width="140" height="80" rx="5" fill="#374151"/>
+  <rect x="385" y="205" width="130" height="70" rx="3" fill="#60a5fa"/>
+
+  <!-- Person silhouette with good posture -->
+  <g transform="translate(150, 80)">
+    <!-- Head -->
+    <ellipse cx="100" cy="30" rx="25" ry="30" fill="url(#skinTone)"/>
+    <!-- Hair -->
+    <ellipse cx="100" cy="15" rx="28" ry="20" fill="#4a3728"/>
+
+    <!-- Neck -->
+    <rect x="90" y="55" width="20" height="25" fill="url(#skinTone)"/>
+
+    <!-- Shoulders/Upper body -->
+    <path d="M50 80 Q100 70 150 80 L160 180 Q100 190 40 180 Z" fill="#3b82f6"/>
+
+    <!-- Posture corrector visible -->
+    <path d="M70 85 Q100 75 130 85" stroke="#1f2937" stroke-width="8" fill="none" stroke-linecap="round"/>
+    <path d="M70 85 L60 130" stroke="#1f2937" stroke-width="6" fill="none" stroke-linecap="round"/>
+    <path d="M130 85 L140 130" stroke="#1f2937" stroke-width="6" fill="none" stroke-linecap="round"/>
+
+    <!-- Arms -->
+    <path d="M50 90 Q30 120 40 170 L55 170 Q50 130 65 105" fill="url(#skinTone)"/>
+    <path d="M150 90 Q170 120 180 170 L195 170 Q190 130 170 105" fill="url(#skinTone)"/>
+
+    <!-- Hands on keyboard suggestion -->
+    <ellipse cx="55" cy="175" rx="15" ry="10" fill="url(#skinTone)"/>
+    <ellipse cx="180" cy="175" rx="15" ry="10" fill="url(#skinTone)"/>
+
+    <!-- Chair back -->
+    <rect x="30" y="150" width="140" height="120" rx="10" fill="#6b7280"/>
+  </g>
+
+  <!-- Checkmark badges -->
+  <g transform="translate(420, 50)">
+    <rect x="0" y="0" width="150" height="40" rx="20" fill="white" opacity="0.9"/>
+    <circle cx="25" cy="20" r="12" fill="#10b981"/>
+    <path d="M19 20 L23 24 L31 16" stroke="white" stroke-width="2" fill="none"/>
+    <text x="45" y="25" font-size="12" fill="#374151" font-weight="500">Better Posture</text>
+  </g>
+
+  <g transform="translate(420, 100)">
+    <rect x="0" y="0" width="150" height="40" rx="20" fill="white" opacity="0.9"/>
+    <circle cx="25" cy="20" r="12" fill="#10b981"/>
+    <path d="M19 20 L23 24 L31 16" stroke="white" stroke-width="2" fill="none"/>
+    <text x="45" y="25" font-size="12" fill="#374151" font-weight="500">Less Pain</text>
+  </g>
+
+  <g transform="translate(420, 150)">
+    <rect x="0" y="0" width="150" height="40" rx="20" fill="white" opacity="0.9"/>
+    <circle cx="25" cy="20" r="12" fill="#10b981"/>
+    <path d="M19 20 L23 24 L31 16" stroke="white" stroke-width="2" fill="none"/>
+    <text x="45" y="25" font-size="12" fill="#374151" font-weight="500">More Energy</text>
+  </g>
+
+  <!-- Decorative plant -->
+  <g transform="translate(500, 230)">
+    <rect x="15" y="40" width="30" height="35" rx="3" fill="#9ca3af"/>
+    <ellipse cx="30" cy="30" rx="25" ry="30" fill="#22c55e"/>
+    <ellipse cx="20" cy="20" rx="15" ry="20" fill="#16a34a"/>
+  </g>
+</svg>
