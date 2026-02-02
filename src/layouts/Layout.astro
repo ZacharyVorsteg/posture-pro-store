@@ -1,0 +1,35 @@
+---
+interface Props {
+  title: string;
+  description: string;
+}
+
+const { title, description } = Astro.props;
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content={description} />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <title>{title}</title>
+
+    <!-- Snipcart -->
+    <link rel="preconnect" href="https://app.snipcart.com" />
+    <link rel="preconnect" href="https://cdn.snipcart.com" />
+    <link rel="stylesheet" href="https://cdn.snipcart.com/themes/v3.2.0/default/snipcart.css" />
+  </head>
+  <body class="min-h-screen bg-white text-gray-900 antialiased">
+    <slot />
+
+    <!-- Snipcart container -->
+    <div hidden id="snipcart" data-api-key="YOUR_SNIPCART_PUBLIC_API_KEY"></div>
+    <script src="https://cdn.snipcart.com/themes/v3.2.0/default/snipcart.js" async></script>
+  </body>
+</html>
+
+<style is:global>
+  @import "../styles/global.css";
+</style>

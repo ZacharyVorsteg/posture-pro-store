@@ -1,0 +1,42 @@
+---
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout
+  title="Contact Us | PosturePro"
+  description="Get in touch with PosturePro customer support."
+>
+  <div class="max-w-3xl mx-auto px-4 py-16">
+    <h1 class="text-4xl font-bold mb-8">Contact Us</h1>
+
+    <div class="grid md:grid-cols-2 gap-8 mb-12">
+      <div class="bg-gray-50 p-6 rounded-xl">
+        <h2 class="text-xl font-bold mb-3">Customer Support</h2>
+        <p class="text-gray-600 mb-2">For order inquiries, returns, and general questions:</p>
+        <a href="mailto:support@posturepro.com" class="text-green-600 hover:underline font-medium">
+          support@posturepro.com
+        </a>
+        <p class="text-sm text-gray-500 mt-2">Response time: Within 24 hours</p>
+      </div>
+
+      <div class="bg-gray-50 p-6 rounded-xl">
+        <h2 class="text-xl font-bold mb-3">Track Your Order</h2>
+        <p class="text-gray-600 mb-2">Check your email for tracking info, or contact us with your order number.</p>
+        <p class="text-sm text-gray-500 mt-2">Tracking updates sent via email</p>
+      </div>
+    </div>
+
+    <div class="bg-green-50 p-6 rounded-xl">
+      <h2 class="text-xl font-bold text-green-800 mb-3">Before You Contact Us</h2>
+      <p class="text-green-700 mb-4">Check our FAQ for quick answers:</p>
+      <ul class="list-disc pl-6 text-green-700 space-y-2">
+        <li><strong>Shipping:</strong> US orders arrive in 3-5 business days</li>
+        <li><strong>Returns:</strong> 30-day money-back guarantee, no questions asked</li>
+        <li><strong>Sizing:</strong> S/M fits 28"-36", L/XL fits 36"-48"</li>
+        <li><strong>Exchanges:</strong> Free size exchanges available</li>
+      </ul>
+    </div>
+
+    <a href="/" class="inline-block mt-8 text-green-600 hover:underline">← Back to Shop</a>
+  </div>
+</Layout>
