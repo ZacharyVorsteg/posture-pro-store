@@ -1,10 +1,18 @@
 ---
 import Layout from '../layouts/Layout.astro';
+
+// Pricing breakdown for transparency
+const pricing = {
+  productPrice: 59.99,
+  restockingFeePercent: 15,
+  restockingFeeAmount: 9.00, // ~$9 covers COGS
+  refundAmount: 50.99
+};
 ---
 
 <Layout
-  title="Refund Policy | PosturePro"
-  description="30-day return policy on all PosturePro products."
+  title="Return & Refund Policy | PosturePro"
+  description="PosturePro return policy. 30-day returns with restocking fee clearly explained."
 >
   <!-- Header -->
   <header class="border-b border-slate-200 bg-white">
@@ -18,47 +26,142 @@ import Layout from '../layouts/Layout.astro';
   </header>
 
   <div class="max-w-3xl mx-auto px-4 py-16">
-    <h1 class="text-2xl font-medium text-slate-900 mb-8">Refund Policy</h1>
+    <h1 class="text-2xl font-medium text-slate-900 mb-8">Return & Refund Policy</h1>
 
-    <div class="bg-slate-50 p-6 rounded-lg mb-8">
-      <h2 class="text-base font-medium text-slate-900 mb-2">30-Day Return Policy</h2>
-      <p class="text-sm text-slate-600">
-        If you're not satisfied with your purchase, you may return it within 30 days for a full refund.
-      </p>
+    <!-- Key Terms Summary Box -->
+    <div class="bg-slate-900 text-white p-6 rounded-lg mb-8">
+      <h2 class="text-lg font-medium mb-4">Summary</h2>
+      <ul class="space-y-2 text-sm">
+        <li class="flex items-start gap-2">
+          <span class="text-slate-400">1.</span>
+          <span>30-day return window from delivery date</span>
+        </li>
+        <li class="flex items-start gap-2">
+          <span class="text-slate-400">2.</span>
+          <span>15% restocking fee applies ($9.00 on $59.99 order)</span>
+        </li>
+        <li class="flex items-start gap-2">
+          <span class="text-slate-400">3.</span>
+          <span>Defective or damaged items: full refund or free replacement</span>
+        </li>
+        <li class="flex items-start gap-2">
+          <span class="text-slate-400">4.</span>
+          <span>Refunds processed within 5-7 business days</span>
+        </li>
+      </ul>
     </div>
 
     <div class="space-y-8 text-sm text-slate-600 leading-relaxed">
-      <section>
-        <h2 class="text-base font-medium text-slate-900 mb-3">How to Request a Refund</h2>
-        <ol class="list-decimal pl-5 space-y-2">
-          <li>Email us at <a href="mailto:support@posturepro.store" class="text-slate-900 underline">support@posturepro.store</a> with your order number</li>
-          <li>We'll send you return instructions</li>
-          <li>Ship the item back within 14 days</li>
-          <li>Receive your refund within 5-7 business days after we receive the return</li>
-        </ol>
-      </section>
 
+      <!-- Why We Charge a Restocking Fee -->
       <section>
-        <h2 class="text-base font-medium text-slate-900 mb-3">Return Conditions</h2>
-        <ul class="list-disc pl-5 space-y-2">
-          <li>Items must be returned within 30 days of delivery</li>
-          <li>Products should be in original packaging when possible</li>
-          <li>We accept returns of used items</li>
+        <h2 class="text-base font-medium text-slate-900 mb-3">Why We Charge a Restocking Fee</h2>
+        <p class="mb-3">
+          We believe in transparency. When you place an order, we incur costs that cannot be recovered:
+        </p>
+        <ul class="list-disc pl-5 space-y-1 mb-3">
+          <li>Payment processing fees (Stripe charges 2.9% + $0.30 per transaction, which they do not refund)</li>
+          <li>Cart platform fees (2% per transaction, non-refundable)</li>
+          <li>Fulfillment and handling costs</li>
         </ul>
-      </section>
-
-      <section>
-        <h2 class="text-base font-medium text-slate-900 mb-3">Exchanges</h2>
         <p>
-          Need a different size? Email us and we'll arrange an exchange.
+          The 15% restocking fee helps us cover these costs so we can continue offering free shipping
+          and keep our prices fair for all customers.
         </p>
       </section>
 
+      <!-- Standard Returns -->
       <section>
-        <h2 class="text-base font-medium text-slate-900 mb-3">Damaged or Defective Items</h2>
+        <h2 class="text-base font-medium text-slate-900 mb-3">Standard Returns (Changed Your Mind)</h2>
+        <p class="mb-3">If you're not satisfied with your purchase for any reason:</p>
+        <ul class="list-disc pl-5 space-y-1">
+          <li>Request a return within 30 days of delivery</li>
+          <li>Product should be in original condition when possible</li>
+          <li>A 15% restocking fee will be deducted from your refund</li>
+          <li>You are responsible for return shipping costs</li>
+        </ul>
+
+        <div class="bg-slate-50 p-4 rounded-lg mt-4">
+          <p class="text-slate-700 font-medium mb-2">Example Refund Calculation:</p>
+          <div class="grid grid-cols-2 gap-2 text-sm">
+            <span>Original purchase:</span>
+            <span class="text-right">$59.99</span>
+            <span>Restocking fee (15%):</span>
+            <span class="text-right text-slate-500">-$9.00</span>
+            <span class="font-medium border-t border-slate-200 pt-2">Your refund:</span>
+            <span class="text-right font-medium border-t border-slate-200 pt-2">$50.99</span>
+          </div>
+        </div>
+      </section>
+
+      <!-- Defective Items - Full Refund -->
+      <section>
+        <h2 class="text-base font-medium text-slate-900 mb-3">Defective or Damaged Items</h2>
+        <p class="mb-3">
+          If your item arrives defective, damaged, or materially different from what was described:
+        </p>
+        <ul class="list-disc pl-5 space-y-1">
+          <li><strong class="text-slate-700">Full refund</strong> - No restocking fee</li>
+          <li>Or a <strong class="text-slate-700">free replacement</strong> shipped to you</li>
+          <li>We cover return shipping costs</li>
+          <li>Please include photos of the defect when contacting us</li>
+        </ul>
+        <p class="mt-3 text-slate-500">
+          We stand behind our product. If it's our fault, we make it right at no cost to you.
+        </p>
+      </section>
+
+      <!-- Wrong Size -->
+      <section>
+        <h2 class="text-base font-medium text-slate-900 mb-3">Size Exchanges</h2>
+        <p class="mb-3">Ordered the wrong size? We make exchanges easy:</p>
+        <ul class="list-disc pl-5 space-y-1">
+          <li>Free exchange for a different size (no restocking fee)</li>
+          <li>You pay return shipping on original item</li>
+          <li>We ship the new size free</li>
+        </ul>
+      </section>
+
+      <!-- How to Request -->
+      <section>
+        <h2 class="text-base font-medium text-slate-900 mb-3">How to Request a Return</h2>
+        <ol class="list-decimal pl-5 space-y-2">
+          <li>
+            Email <a href="mailto:support@posturepro.store" class="text-slate-900 underline">support@posturepro.store</a>
+            with your order number and reason for return
+          </li>
+          <li>We'll reply within 24 hours with return instructions</li>
+          <li>Ship the item back within 14 days of receiving instructions</li>
+          <li>Once received, refunds are processed within 5-7 business days</li>
+        </ol>
+      </section>
+
+      <!-- Non-Returnable -->
+      <section>
+        <h2 class="text-base font-medium text-slate-900 mb-3">Non-Returnable Items</h2>
+        <p>The following cannot be returned:</p>
+        <ul class="list-disc pl-5 space-y-1 mt-2">
+          <li>Items returned after 30 days from delivery</li>
+          <li>Items that have been significantly damaged by the customer</li>
+          <li>Items without proof of purchase</li>
+        </ul>
+      </section>
+
+      <!-- Chargebacks Warning -->
+      <section class="border border-amber-200 bg-amber-50 p-4 rounded-lg">
+        <h2 class="text-base font-medium text-amber-900 mb-2">A Note on Chargebacks</h2>
+        <p class="text-sm text-amber-800">
+          Please contact us before disputing a charge with your bank. We're happy to resolve any issues directly.
+          Filing a chargeback without first contacting us may result in being banned from future purchases
+          and does not guarantee a faster resolution.
+        </p>
+      </section>
+
+      <!-- Contact -->
+      <section>
+        <h2 class="text-base font-medium text-slate-900 mb-3">Questions?</h2>
         <p>
-          If your item arrives damaged or defective, contact us immediately.
-          We'll ship a replacement at no additional cost.
+          Contact us at <a href="mailto:support@posturepro.store" class="text-slate-900 underline">support@posturepro.store</a>
         </p>
       </section>
     </div>
